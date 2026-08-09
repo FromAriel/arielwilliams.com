@@ -1,7 +1,356 @@
 (() => {
   "use strict";
 
-  const codexUsage = [{"date":"2025-08-30","millions":92.7},{"date":"2025-08-31","millions":39.2},{"date":"2025-09-01","millions":1.2},{"date":"2025-09-02","millions":17.4},{"date":"2025-09-03","millions":3.0},{"date":"2025-09-04","millions":46.2},{"date":"2025-09-05","millions":53.2},{"date":"2025-09-06","millions":91.8},{"date":"2025-09-07","millions":34.9},{"date":"2025-09-08","millions":52.3},{"date":"2025-09-09","millions":6.9},{"date":"2025-09-10","millions":34.2},{"date":"2025-09-11","millions":51.8},{"date":"2025-09-12","millions":12.6},{"date":"2025-09-13","millions":51.4},{"date":"2025-09-14","millions":116.2},{"date":"2025-09-15","millions":23.7},{"date":"2025-09-16","millions":81.9},{"date":"2025-09-17","millions":96.0},{"date":"2025-09-18","millions":128.0},{"date":"2025-09-19","millions":89.9},{"date":"2025-09-20","millions":94.3},{"date":"2025-09-21","millions":15.4},{"date":"2025-09-22","millions":45.0},{"date":"2025-09-23","millions":20.0},{"date":"2025-09-24","millions":57.6},{"date":"2025-09-25","millions":102.9},{"date":"2025-09-26","millions":153.2},{"date":"2025-09-27","millions":7.8},{"date":"2025-09-28","millions":74.9},{"date":"2025-09-29","millions":96.2},{"date":"2025-09-30","millions":0.2404},{"date":"2025-10-01","millions":0.0},{"date":"2025-10-02","millions":0.0},{"date":"2025-10-03","millions":262.4},{"date":"2025-10-04","millions":23.9},{"date":"2025-10-05","millions":84.1},{"date":"2025-10-06","millions":101.4},{"date":"2025-10-07","millions":55.7},{"date":"2025-10-08","millions":71.2},{"date":"2025-10-09","millions":43.6},{"date":"2025-10-10","millions":91.9},{"date":"2025-10-11","millions":127.6},{"date":"2025-10-12","millions":32.4},{"date":"2025-10-13","millions":74.1},{"date":"2025-10-14","millions":62.4},{"date":"2025-10-15","millions":41.9},{"date":"2025-10-16","millions":125.9},{"date":"2025-10-17","millions":98.2},{"date":"2025-10-18","millions":65.4},{"date":"2025-10-19","millions":66.2},{"date":"2025-10-20","millions":137.6},{"date":"2025-10-21","millions":153.3},{"date":"2025-10-22","millions":60.9},{"date":"2025-10-23","millions":97.6},{"date":"2025-10-24","millions":109.3},{"date":"2025-10-25","millions":79.7},{"date":"2025-10-26","millions":45.3},{"date":"2025-10-27","millions":184.0},{"date":"2025-10-28","millions":267.9},{"date":"2025-10-29","millions":88.4},{"date":"2025-10-30","millions":31.1},{"date":"2025-10-31","millions":56.3},{"date":"2025-11-01","millions":64.2},{"date":"2025-11-02","millions":45.7},{"date":"2025-11-03","millions":119.3},{"date":"2025-11-04","millions":244.9},{"date":"2025-11-05","millions":250.1},{"date":"2025-11-06","millions":94.9},{"date":"2025-11-07","millions":126.2},{"date":"2025-11-08","millions":197.4},{"date":"2025-11-09","millions":159.3},{"date":"2025-11-10","millions":104.3},{"date":"2025-11-11","millions":296.7},{"date":"2025-11-12","millions":113.0},{"date":"2025-11-13","millions":305.8},{"date":"2025-11-14","millions":211.0},{"date":"2025-11-15","millions":210.1},{"date":"2025-11-16","millions":180.2},{"date":"2025-11-17","millions":171.6},{"date":"2025-11-18","millions":268.2},{"date":"2025-11-19","millions":86.0},{"date":"2025-11-20","millions":95.1},{"date":"2025-11-21","millions":88.2},{"date":"2025-11-22","millions":22.7},{"date":"2025-11-23","millions":44.0},{"date":"2025-11-24","millions":134.4},{"date":"2025-11-25","millions":103.4},{"date":"2025-11-26","millions":58.1},{"date":"2025-11-27","millions":140.6},{"date":"2025-11-28","millions":152.1},{"date":"2025-11-29","millions":113.4},{"date":"2025-11-30","millions":63.2},{"date":"2025-12-01","millions":130.8},{"date":"2025-12-02","millions":160.5},{"date":"2025-12-03","millions":36.7},{"date":"2025-12-04","millions":87.4},{"date":"2025-12-05","millions":70.4},{"date":"2025-12-06","millions":29.4},{"date":"2025-12-07","millions":57.3},{"date":"2025-12-08","millions":92.5},{"date":"2025-12-09","millions":100.4},{"date":"2025-12-10","millions":91.2},{"date":"2025-12-11","millions":111.3},{"date":"2025-12-12","millions":106.3},{"date":"2025-12-13","millions":144.4},{"date":"2025-12-14","millions":104.4},{"date":"2025-12-15","millions":125.2},{"date":"2025-12-16","millions":98.2},{"date":"2025-12-17","millions":63.6},{"date":"2025-12-18","millions":90.9},{"date":"2025-12-19","millions":111.4},{"date":"2025-12-20","millions":119.1},{"date":"2025-12-21","millions":73.4},{"date":"2025-12-22","millions":82.9},{"date":"2025-12-23","millions":98.7},{"date":"2025-12-24","millions":49.7},{"date":"2025-12-25","millions":74.6},{"date":"2025-12-26","millions":113.0},{"date":"2025-12-27","millions":51.9},{"date":"2025-12-28","millions":13.7},{"date":"2025-12-29","millions":102.3},{"date":"2025-12-30","millions":82.6},{"date":"2025-12-31","millions":37.8},{"date":"2026-01-01","millions":135.7},{"date":"2026-01-02","millions":30.2},{"date":"2026-01-03","millions":132.4},{"date":"2026-01-04","millions":73.0},{"date":"2026-01-05","millions":21.0},{"date":"2026-01-06","millions":57.0},{"date":"2026-01-07","millions":15.7},{"date":"2026-01-08","millions":52.8},{"date":"2026-01-09","millions":102.2},{"date":"2026-01-10","millions":61.8},{"date":"2026-01-11","millions":107.5},{"date":"2026-01-12","millions":76.0},{"date":"2026-01-13","millions":32.1},{"date":"2026-01-14","millions":114.2},{"date":"2026-01-15","millions":54.4},{"date":"2026-01-16","millions":25.6},{"date":"2026-01-17","millions":71.9},{"date":"2026-01-18","millions":75.5},{"date":"2026-01-19","millions":21.3},{"date":"2026-01-20","millions":35.2},{"date":"2026-01-21","millions":28.3},{"date":"2026-01-22","millions":25.8},{"date":"2026-01-23","millions":106.4},{"date":"2026-01-24","millions":65.2},{"date":"2026-01-25","millions":62.5},{"date":"2026-01-26","millions":64.9},{"date":"2026-01-27","millions":95.0},{"date":"2026-01-28","millions":45.9},{"date":"2026-01-29","millions":50.5},{"date":"2026-01-30","millions":94.7},{"date":"2026-01-31","millions":42.8},{"date":"2026-02-01","millions":32.5},{"date":"2026-02-02","millions":146.2},{"date":"2026-02-03","millions":39.7},{"date":"2026-02-04","millions":0.0},{"date":"2026-02-05","millions":19.4},{"date":"2026-02-06","millions":49.6},{"date":"2026-02-07","millions":86.1},{"date":"2026-02-08","millions":9.7},{"date":"2026-02-09","millions":81.0},{"date":"2026-02-10","millions":47.6},{"date":"2026-02-11","millions":47.0},{"date":"2026-02-12","millions":67.0},{"date":"2026-02-13","millions":197.3},{"date":"2026-02-14","millions":100.2},{"date":"2026-02-15","millions":68.4},{"date":"2026-02-16","millions":130.4},{"date":"2026-02-17","millions":101.6},{"date":"2026-02-18","millions":59.8},{"date":"2026-02-19","millions":218.2},{"date":"2026-02-20","millions":36.7},{"date":"2026-02-21","millions":23.7},{"date":"2026-02-22","millions":71.8},{"date":"2026-02-23","millions":0.0},{"date":"2026-02-24","millions":97.7},{"date":"2026-02-25","millions":39.6},{"date":"2026-02-26","millions":40.0},{"date":"2026-02-27","millions":12.2},{"date":"2026-02-28","millions":44.7},{"date":"2026-03-01","millions":41.6},{"date":"2026-03-02","millions":109.5},{"date":"2026-03-03","millions":115.8},{"date":"2026-03-04","millions":43.8},{"date":"2026-03-05","millions":15.8},{"date":"2026-03-06","millions":27.9},{"date":"2026-03-07","millions":5.8},{"date":"2026-03-08","millions":15.2},{"date":"2026-03-09","millions":46.8},{"date":"2026-03-10","millions":47.5},{"date":"2026-03-11","millions":112.4},{"date":"2026-03-12","millions":25.6},{"date":"2026-03-13","millions":39.8},{"date":"2026-03-14","millions":30.4},{"date":"2026-03-15","millions":73.1},{"date":"2026-03-16","millions":71.7},{"date":"2026-03-17","millions":101.4},{"date":"2026-03-18","millions":66.5},{"date":"2026-03-19","millions":44.8},{"date":"2026-03-20","millions":183.9},{"date":"2026-03-21","millions":33.2},{"date":"2026-03-22","millions":31.9},{"date":"2026-03-23","millions":95.6},{"date":"2026-03-24","millions":0.0},{"date":"2026-03-25","millions":62.1},{"date":"2026-03-26","millions":181.8},{"date":"2026-03-27","millions":73.2},{"date":"2026-03-28","millions":171.6},{"date":"2026-03-29","millions":62.8},{"date":"2026-03-30","millions":15.0},{"date":"2026-03-31","millions":0.3265},{"date":"2026-04-01","millions":0.9104},{"date":"2026-04-02","millions":84.8},{"date":"2026-04-03","millions":100.4},{"date":"2026-04-04","millions":40.8},{"date":"2026-04-05","millions":100.5},{"date":"2026-04-06","millions":101.2},{"date":"2026-04-07","millions":172.1},{"date":"2026-04-08","millions":74.4},{"date":"2026-04-09","millions":93.5},{"date":"2026-04-10","millions":149.4},{"date":"2026-04-11","millions":76.5},{"date":"2026-04-12","millions":106.1},{"date":"2026-04-13","millions":13.9},{"date":"2026-04-14","millions":144.7},{"date":"2026-04-15","millions":59.2},{"date":"2026-04-16","millions":38.1},{"date":"2026-04-17","millions":97.6},{"date":"2026-04-18","millions":14.3},{"date":"2026-04-19","millions":0.0},{"date":"2026-04-20","millions":0.0},{"date":"2026-04-21","millions":0.0},{"date":"2026-04-22","millions":0.0},{"date":"2026-04-23","millions":27.3},{"date":"2026-04-24","millions":96.2},{"date":"2026-04-25","millions":29.0},{"date":"2026-04-26","millions":6.0},{"date":"2026-04-27","millions":0.0},{"date":"2026-04-28","millions":67.4},{"date":"2026-04-29","millions":67.4},{"date":"2026-04-30","millions":18.3},{"date":"2026-05-01","millions":128.5},{"date":"2026-05-02","millions":287.6},{"date":"2026-05-03","millions":179.9},{"date":"2026-05-04","millions":218.1},{"date":"2026-05-05","millions":169.7},{"date":"2026-05-06","millions":212.0},{"date":"2026-05-07","millions":67.1},{"date":"2026-05-08","millions":5.8},{"date":"2026-05-09","millions":121.6},{"date":"2026-05-10","millions":84.4},{"date":"2026-05-11","millions":110.1},{"date":"2026-05-12","millions":7.8},{"date":"2026-05-13","millions":26.2},{"date":"2026-05-14","millions":155.9},{"date":"2026-05-15","millions":41.3},{"date":"2026-05-16","millions":86.1},{"date":"2026-05-17","millions":83.4},{"date":"2026-05-18","millions":95.5},{"date":"2026-05-19","millions":163.3},{"date":"2026-05-20","millions":171.5},{"date":"2026-05-21","millions":102.0},{"date":"2026-05-22","millions":122.0},{"date":"2026-05-23","millions":145.0},{"date":"2026-05-24","millions":90.1},{"date":"2026-05-25","millions":56.5},{"date":"2026-05-26","millions":71.7},{"date":"2026-05-27","millions":72.3},{"date":"2026-05-28","millions":57.3},{"date":"2026-05-29","millions":133.6},{"date":"2026-05-30","millions":103.7},{"date":"2026-05-31","millions":132.3},{"date":"2026-06-01","millions":139.2},{"date":"2026-06-02","millions":28.0},{"date":"2026-06-03","millions":82.1},{"date":"2026-06-04","millions":60.6},{"date":"2026-06-05","millions":110.2},{"date":"2026-06-06","millions":1.9},{"date":"2026-06-07","millions":0.0},{"date":"2026-06-08","millions":0.0},{"date":"2026-06-09","millions":43.8},{"date":"2026-06-10","millions":18.7},{"date":"2026-06-11","millions":206.1},{"date":"2026-06-12","millions":204.4},{"date":"2026-06-13","millions":1.6},{"date":"2026-06-14","millions":33.5},{"date":"2026-06-15","millions":335.2},{"date":"2026-06-16","millions":273.3},{"date":"2026-06-17","millions":303.3},{"date":"2026-06-18","millions":302.0},{"date":"2026-06-19","millions":181.3},{"date":"2026-06-20","millions":149.6},{"date":"2026-06-21","millions":135.7},{"date":"2026-06-22","millions":223.9},{"date":"2026-06-23","millions":330.9},{"date":"2026-06-24","millions":87.3},{"date":"2026-06-25","millions":327.3},{"date":"2026-06-26","millions":125.2},{"date":"2026-06-27","millions":35.1},{"date":"2026-06-28","millions":111.1},{"date":"2026-06-29","millions":190.4},{"date":"2026-06-30","millions":279.3},{"date":"2026-07-01","millions":348.6},{"date":"2026-07-02","millions":138.8},{"date":"2026-07-03","millions":100.9},{"date":"2026-07-04","millions":246.4},{"date":"2026-07-05","millions":371.1},{"date":"2026-07-06","millions":130.7},{"date":"2026-07-07","millions":69.1},{"date":"2026-07-08","millions":27.7},{"date":"2026-07-09","millions":79.7},{"date":"2026-07-10","millions":528.9},{"date":"2026-07-11","millions":411.7},{"date":"2026-07-12","millions":532.3}];
+  const rawCodexUsage = [
+    { date: "2025-08-30", tokens: 92706560 },
+    { date: "2025-08-31", tokens: 39189573 },
+    { date: "2025-09-01", tokens: 1272864 },
+    { date: "2025-09-02", tokens: 17376522 },
+    { date: "2025-09-03", tokens: 3031777 },
+    { date: "2025-09-04", tokens: 46161162 },
+    { date: "2025-09-05", tokens: 53218259 },
+    { date: "2025-09-06", tokens: 91803672 },
+    { date: "2025-09-07", tokens: 34871003 },
+    { date: "2025-09-08", tokens: 52311085 },
+    { date: "2025-09-09", tokens: 6929142 },
+    { date: "2025-09-10", tokens: 34231572 },
+    { date: "2025-09-11", tokens: 51809462 },
+    { date: "2025-09-12", tokens: 12639304 },
+    { date: "2025-09-13", tokens: 51397292 },
+    { date: "2025-09-14", tokens: 116213397 },
+    { date: "2025-09-15", tokens: 23740507 },
+    { date: "2025-09-16", tokens: 81911076 },
+    { date: "2025-09-17", tokens: 96011352 },
+    { date: "2025-09-18", tokens: 127951134 },
+    { date: "2025-09-19", tokens: 89856512 },
+    { date: "2025-09-20", tokens: 94337248 },
+    { date: "2025-09-21", tokens: 15413318 },
+    { date: "2025-09-22", tokens: 44984739 },
+    { date: "2025-09-23", tokens: 20049215 },
+    { date: "2025-09-24", tokens: 57607259 },
+    { date: "2025-09-25", tokens: 102856300 },
+    { date: "2025-09-26", tokens: 153179795 },
+    { date: "2025-09-27", tokens: 7751254 },
+    { date: "2025-09-28", tokens: 74921357 },
+    { date: "2025-09-29", tokens: 96159931 },
+    { date: "2025-09-30", tokens: 240416 },
+    { date: "2025-10-01", tokens: null },
+    { date: "2025-10-02", tokens: null },
+    { date: "2025-10-03", tokens: 262434365 },
+    { date: "2025-10-04", tokens: 23947594 },
+    { date: "2025-10-05", tokens: 84111510 },
+    { date: "2025-10-06", tokens: 101432965 },
+    { date: "2025-10-07", tokens: 55662638 },
+    { date: "2025-10-08", tokens: 71244323 },
+    { date: "2025-10-09", tokens: 43624555 },
+    { date: "2025-10-10", tokens: 91935558 },
+    { date: "2025-10-11", tokens: 127596628 },
+    { date: "2025-10-12", tokens: 32423564 },
+    { date: "2025-10-13", tokens: 74057881 },
+    { date: "2025-10-14", tokens: 62449306 },
+    { date: "2025-10-15", tokens: 41941048 },
+    { date: "2025-10-16", tokens: 125854999 },
+    { date: "2025-10-17", tokens: 98192886 },
+    { date: "2025-10-18", tokens: 65400459 },
+    { date: "2025-10-19", tokens: 66237235 },
+    { date: "2025-10-20", tokens: 137609583 },
+    { date: "2025-10-21", tokens: 153264248 },
+    { date: "2025-10-22", tokens: 60918837 },
+    { date: "2025-10-23", tokens: 97622682 },
+    { date: "2025-10-24", tokens: 109296055 },
+    { date: "2025-10-25", tokens: 79703175 },
+    { date: "2025-10-26", tokens: 45267605 },
+    { date: "2025-10-27", tokens: 184011365 },
+    { date: "2025-10-28", tokens: 267872874 },
+    { date: "2025-10-29", tokens: 88419355 },
+    { date: "2025-10-30", tokens: 31100839 },
+    { date: "2025-10-31", tokens: 56325434 },
+    { date: "2025-11-01", tokens: 64167713 },
+    { date: "2025-11-02", tokens: 45729400 },
+    { date: "2025-11-03", tokens: 119274962 },
+    { date: "2025-11-04", tokens: 244897704 },
+    { date: "2025-11-05", tokens: 250109298 },
+    { date: "2025-11-06", tokens: 94897576 },
+    { date: "2025-11-07", tokens: 126176460 },
+    { date: "2025-11-08", tokens: 197354447 },
+    { date: "2025-11-09", tokens: 159339208 },
+    { date: "2025-11-10", tokens: 104253318 },
+    { date: "2025-11-11", tokens: 296717764 },
+    { date: "2025-11-12", tokens: 112975543 },
+    { date: "2025-11-13", tokens: 305787345 },
+    { date: "2025-11-14", tokens: 211015235 },
+    { date: "2025-11-15", tokens: 210148606 },
+    { date: "2025-11-16", tokens: 180160321 },
+    { date: "2025-11-17", tokens: 171604448 },
+    { date: "2025-11-18", tokens: 268162304 },
+    { date: "2025-11-19", tokens: 86023011 },
+    { date: "2025-11-20", tokens: 95079241 },
+    { date: "2025-11-21", tokens: 88220524 },
+    { date: "2025-11-22", tokens: 22689075 },
+    { date: "2025-11-23", tokens: 44014409 },
+    { date: "2025-11-24", tokens: 134418244 },
+    { date: "2025-11-25", tokens: 103410292 },
+    { date: "2025-11-26", tokens: 58116794 },
+    { date: "2025-11-27", tokens: 140606088 },
+    { date: "2025-11-28", tokens: 152058779 },
+    { date: "2025-11-29", tokens: 113365219 },
+    { date: "2025-11-30", tokens: 63199885 },
+    { date: "2025-12-01", tokens: 130799288 },
+    { date: "2025-12-02", tokens: 160453277 },
+    { date: "2025-12-03", tokens: 36744677 },
+    { date: "2025-12-04", tokens: 87387530 },
+    { date: "2025-12-05", tokens: 70374729 },
+    { date: "2025-12-06", tokens: 29449103 },
+    { date: "2025-12-07", tokens: 57273439 },
+    { date: "2025-12-08", tokens: 92528900 },
+    { date: "2025-12-09", tokens: 100396907 },
+    { date: "2025-12-10", tokens: 91216811 },
+    { date: "2025-12-11", tokens: 111279712 },
+    { date: "2025-12-12", tokens: 106270274 },
+    { date: "2025-12-13", tokens: 143963262 },
+    { date: "2025-12-14", tokens: 104422499 },
+    { date: "2025-12-15", tokens: 125158914 },
+    { date: "2025-12-16", tokens: 98197390 },
+    { date: "2025-12-17", tokens: 63626807 },
+    { date: "2025-12-18", tokens: 90893845 },
+    { date: "2025-12-19", tokens: 111389930 },
+    { date: "2025-12-20", tokens: 119062420 },
+    { date: "2025-12-21", tokens: 73441885 },
+    { date: "2025-12-22", tokens: 82923700 },
+    { date: "2025-12-23", tokens: 98720886 },
+    { date: "2025-12-24", tokens: 49739043 },
+    { date: "2025-12-25", tokens: 74638106 },
+    { date: "2025-12-26", tokens: 113044505 },
+    { date: "2025-12-27", tokens: 51889807 },
+    { date: "2025-12-28", tokens: 13722553 },
+    { date: "2025-12-29", tokens: 102315975 },
+    { date: "2025-12-30", tokens: 82600835 },
+    { date: "2025-12-31", tokens: 37765309 },
+    { date: "2026-01-01", tokens: 135657987 },
+    { date: "2026-01-02", tokens: 30155594 },
+    { date: "2026-01-03", tokens: 132412900 },
+    { date: "2026-01-04", tokens: 72997061 },
+    { date: "2026-01-05", tokens: 20995260 },
+    { date: "2026-01-06", tokens: 57678599 },
+    { date: "2026-01-07", tokens: 15746591 },
+    { date: "2026-01-08", tokens: 52772623 },
+    { date: "2026-01-09", tokens: 102182608 },
+    { date: "2026-01-10", tokens: 61790005 },
+    { date: "2026-01-11", tokens: 107484366 },
+    { date: "2026-01-12", tokens: 76029044 },
+    { date: "2026-01-13", tokens: 32127722 },
+    { date: "2026-01-14", tokens: 114217043 },
+    { date: "2026-01-15", tokens: 54408961 },
+    { date: "2026-01-16", tokens: 25567126 },
+    { date: "2026-01-17", tokens: 71942953 },
+    { date: "2026-01-18", tokens: 75513009 },
+    { date: "2026-01-19", tokens: 21328841 },
+    { date: "2026-01-20", tokens: 35172693 },
+    { date: "2026-01-21", tokens: 28332741 },
+    { date: "2026-01-22", tokens: 25774836 },
+    { date: "2026-01-23", tokens: 106436050 },
+    { date: "2026-01-24", tokens: 65178802 },
+    { date: "2026-01-25", tokens: 62518846 },
+    { date: "2026-01-26", tokens: 64888018 },
+    { date: "2026-01-27", tokens: 95022921 },
+    { date: "2026-01-28", tokens: 45941214 },
+    { date: "2026-01-29", tokens: 50519298 },
+    { date: "2026-01-30", tokens: 94717936 },
+    { date: "2026-01-31", tokens: 42765323 },
+    { date: "2026-02-01", tokens: 32531671 },
+    { date: "2026-02-02", tokens: 146155928 },
+    { date: "2026-02-03", tokens: 39655714 },
+    { date: "2026-02-04", tokens: null },
+    { date: "2026-02-05", tokens: 19376286 },
+    { date: "2026-02-06", tokens: 49561635 },
+    { date: "2026-02-07", tokens: 86092190 },
+    { date: "2026-02-08", tokens: 9658610 },
+    { date: "2026-02-09", tokens: 81023878 },
+    { date: "2026-02-10", tokens: 47557102 },
+    { date: "2026-02-11", tokens: 46984154 },
+    { date: "2026-02-12", tokens: 66957198 },
+    { date: "2026-02-13", tokens: 197304730 },
+    { date: "2026-02-14", tokens: 100191326 },
+    { date: "2026-02-15", tokens: 68379805 },
+    { date: "2026-02-16", tokens: 130407564 },
+    { date: "2026-02-17", tokens: 101600400 },
+    { date: "2026-02-18", tokens: 59764861 },
+    { date: "2026-02-19", tokens: 218154984 },
+    { date: "2026-02-20", tokens: 36736588 },
+    { date: "2026-02-21", tokens: 23733546 },
+    { date: "2026-02-22", tokens: 71794348 },
+    { date: "2026-02-23", tokens: null },
+    { date: "2026-02-24", tokens: 97659506 },
+    { date: "2026-02-25", tokens: 39638232 },
+    { date: "2026-02-26", tokens: 40020195 },
+    { date: "2026-02-27", tokens: 12234285 },
+    { date: "2026-02-28", tokens: 44694410 },
+    { date: "2026-03-01", tokens: 41581501 },
+    { date: "2026-03-02", tokens: 109481761 },
+    { date: "2026-03-03", tokens: 115801098 },
+    { date: "2026-03-04", tokens: 43842755 },
+    { date: "2026-03-05", tokens: 15821374 },
+    { date: "2026-03-06", tokens: 27904949 },
+    { date: "2026-03-07", tokens: 5750132 },
+    { date: "2026-03-08", tokens: 15201276 },
+    { date: "2026-03-09", tokens: 46790681 },
+    { date: "2026-03-10", tokens: 47532485 },
+    { date: "2026-03-11", tokens: 112407495 },
+    { date: "2026-03-12", tokens: 25606007 },
+    { date: "2026-03-13", tokens: 39767183 },
+    { date: "2026-03-14", tokens: 30393532 },
+    { date: "2026-03-15", tokens: 73054864 },
+    { date: "2026-03-16", tokens: 71702681 },
+    { date: "2026-03-17", tokens: 101354447 },
+    { date: "2026-03-18", tokens: 66481787 },
+    { date: "2026-03-19", tokens: 44800720 },
+    { date: "2026-03-20", tokens: 183921184 },
+    { date: "2026-03-21", tokens: 33240490 },
+    { date: "2026-03-22", tokens: 31875219 },
+    { date: "2026-03-23", tokens: 95569790 },
+    { date: "2026-03-24", tokens: null },
+    { date: "2026-03-25", tokens: 62099352 },
+    { date: "2026-03-26", tokens: 181777347 },
+    { date: "2026-03-27", tokens: 73179032 },
+    { date: "2026-03-28", tokens: 171558995 },
+    { date: "2026-03-29", tokens: 62819345 },
+    { date: "2026-03-30", tokens: 14950463 },
+    { date: "2026-03-31", tokens: 326535 },
+    { date: "2026-04-01", tokens: 910362 },
+    { date: "2026-04-02", tokens: 84833230 },
+    { date: "2026-04-03", tokens: 100392993 },
+    { date: "2026-04-04", tokens: 40815208 },
+    { date: "2026-04-05", tokens: 105012308 },
+    { date: "2026-04-06", tokens: 101161235 },
+    { date: "2026-04-07", tokens: 172092763 },
+    { date: "2026-04-08", tokens: 74393830 },
+    { date: "2026-04-09", tokens: 93539798 },
+    { date: "2026-04-10", tokens: 149410625 },
+    { date: "2026-04-11", tokens: 76519538 },
+    { date: "2026-04-12", tokens: 106098972 },
+    { date: "2026-04-13", tokens: 13904515 },
+    { date: "2026-04-14", tokens: 144697479 },
+    { date: "2026-04-15", tokens: 59186881 },
+    { date: "2026-04-16", tokens: 38076403 },
+    { date: "2026-04-17", tokens: 97598979 },
+    { date: "2026-04-18", tokens: 14290005 },
+    { date: "2026-04-19", tokens: null },
+    { date: "2026-04-20", tokens: null },
+    { date: "2026-04-21", tokens: null },
+    { date: "2026-04-22", tokens: null },
+    { date: "2026-04-23", tokens: 27349917 },
+    { date: "2026-04-24", tokens: 96208501 },
+    { date: "2026-04-25", tokens: 29015854 },
+    { date: "2026-04-26", tokens: 6017805 },
+    { date: "2026-04-27", tokens: null },
+    { date: "2026-04-28", tokens: 67424465 },
+    { date: "2026-04-29", tokens: 67431470 },
+    { date: "2026-04-30", tokens: 18276100 },
+    { date: "2026-05-01", tokens: 128508336 },
+    { date: "2026-05-02", tokens: 287639602 },
+    { date: "2026-05-03", tokens: 179879149 },
+    { date: "2026-05-04", tokens: 218123702 },
+    { date: "2026-05-05", tokens: 169707891 },
+    { date: "2026-05-06", tokens: 212036543 },
+    { date: "2026-05-07", tokens: 67065447 },
+    { date: "2026-05-08", tokens: 5802865 },
+    { date: "2026-05-09", tokens: 121626847 },
+    { date: "2026-05-10", tokens: 84412527 },
+    { date: "2026-05-11", tokens: 110099070 },
+    { date: "2026-05-12", tokens: 7773712 },
+    { date: "2026-05-13", tokens: 26188516 },
+    { date: "2026-05-14", tokens: 155907789 },
+    { date: "2026-05-15", tokens: 41255858 },
+    { date: "2026-05-16", tokens: 86083504 },
+    { date: "2026-05-17", tokens: 83387080 },
+    { date: "2026-05-18", tokens: 95517556 },
+    { date: "2026-05-19", tokens: 163251747 },
+    { date: "2026-05-20", tokens: 171504861 },
+    { date: "2026-05-21", tokens: 101961609 },
+    { date: "2026-05-22", tokens: 122043423 },
+    { date: "2026-05-23", tokens: 145215460 },
+    { date: "2026-05-24", tokens: 90122768 },
+    { date: "2026-05-25", tokens: 56521146 },
+    { date: "2026-05-26", tokens: 71148619 },
+    { date: "2026-05-27", tokens: 72337446 },
+    { date: "2026-05-28", tokens: 57286472 },
+    { date: "2026-05-29", tokens: 133625102 },
+    { date: "2026-05-30", tokens: 103748998 },
+    { date: "2026-05-31", tokens: 132284726 },
+    { date: "2026-06-01", tokens: 139192313 },
+    { date: "2026-06-02", tokens: 28022391 },
+    { date: "2026-06-03", tokens: 82062987 },
+    { date: "2026-06-04", tokens: 60573986 },
+    { date: "2026-06-05", tokens: 110232409 },
+    { date: "2026-06-06", tokens: 1945385 },
+    { date: "2026-06-07", tokens: null },
+    { date: "2026-06-08", tokens: null },
+    { date: "2026-06-09", tokens: 43834919 },
+    { date: "2026-06-10", tokens: 18661327 },
+    { date: "2026-06-11", tokens: 206118004 },
+    { date: "2026-06-12", tokens: 204438032 },
+    { date: "2026-06-13", tokens: 1636231 },
+    { date: "2026-06-14", tokens: 33542348 },
+    { date: "2026-06-15", tokens: 335221616 },
+    { date: "2026-06-16", tokens: 273308302 },
+    { date: "2026-06-17", tokens: 303292274 },
+    { date: "2026-06-18", tokens: 302039872 },
+    { date: "2026-06-19", tokens: 181294148 },
+    { date: "2026-06-20", tokens: 149625916 },
+    { date: "2026-06-21", tokens: 135742848 },
+    { date: "2026-06-22", tokens: 223915765 },
+    { date: "2026-06-23", tokens: 330919486 },
+    { date: "2026-06-24", tokens: 87329987 },
+    { date: "2026-06-25", tokens: 327292654 },
+    { date: "2026-06-26", tokens: 125175005 },
+    { date: "2026-06-27", tokens: 35066602 },
+    { date: "2026-06-28", tokens: 111078399 },
+    { date: "2026-06-29", tokens: 190351340 },
+    { date: "2026-06-30", tokens: 279230431 },
+    { date: "2026-07-01", tokens: 348612851 },
+    { date: "2026-07-02", tokens: 138762296 },
+    { date: "2026-07-03", tokens: 100852085 },
+    { date: "2026-07-04", tokens: 246399113 },
+    { date: "2026-07-05", tokens: 371149198 },
+    { date: "2026-07-06", tokens: 130739434 },
+    { date: "2026-07-07", tokens: 69052102 },
+    { date: "2026-07-08", tokens: 27737196 },
+    { date: "2026-07-09", tokens: 79701996 },
+    { date: "2026-07-10", tokens: 528886879 },
+    { date: "2026-07-11", tokens: 411674215 },
+    { date: "2026-07-12", tokens: 532265101 },
+    { date: "2026-07-13", tokens: 672123338 },
+    { date: "2026-07-14", tokens: 488745793 },
+    { date: "2026-07-15", tokens: 640127740 },
+    { date: "2026-07-16", tokens: 621658594 },
+    { date: "2026-07-17", tokens: 1782168715 },
+    { date: "2026-07-18", tokens: 611618684 },
+    { date: "2026-07-19", tokens: 1392502517 },
+    { date: "2026-07-20", tokens: 246848259 },
+    { date: "2026-07-21", tokens: 429222343 },
+    { date: "2026-07-22", tokens: 382825553 },
+    { date: "2026-07-23", tokens: 972318542 },
+    { date: "2026-07-24", tokens: 264048487 },
+    { date: "2026-07-25", tokens: 559154905 },
+    { date: "2026-07-26", tokens: 859738616 },
+    { date: "2026-07-27", tokens: 1088370933 },
+    { date: "2026-07-28", tokens: 1679439520 },
+    { date: "2026-07-29", tokens: 957973650 },
+    { date: "2026-07-30", tokens: 639690395 },
+    { date: "2026-07-31", tokens: 769661704 },
+    { date: "2026-08-01", tokens: 265473083 },
+    { date: "2026-08-02", tokens: 1312951449 },
+    { date: "2026-08-03", tokens: 1282054348 },
+    { date: "2026-08-04", tokens: 984472942 },
+    { date: "2026-08-05", tokens: 93106343 },
+    { date: "2026-08-06", tokens: 143237587 },
+    { date: "2026-08-07", tokens: 228672768 },
+    { date: "2026-08-08", tokens: 1037195855 }
+  ];
+  const codexUsage = rawCodexUsage.map(day => ({
+    ...day,
+    millions: day.tokens === null ? null : day.tokens / 1000000
+  }));
 
   const field = document.querySelector("[data-codex-field]");
   if (!field) return;
@@ -30,7 +379,7 @@
   const weekdays = ["M", "T", "W", "T", "F", "S", "S"];
   const monthFormat = new Intl.DateTimeFormat("en-US", { month: "short" });
   const dateFormat = new Intl.DateTimeFormat("en-US", { month: "long", day: "numeric", year: "numeric" });
-  const numberFormat = new Intl.NumberFormat("en-US", { maximumFractionDigits: 4 });
+  const exactTokenFormat = new Intl.NumberFormat("en-US", { maximumFractionDigits: 0 });
   const compactFormat = new Intl.NumberFormat("en-US", { maximumFractionDigits: 1 });
 
   let dpr = Math.min(window.devicePixelRatio || 1, 2);
@@ -52,10 +401,13 @@
   let pointer = { x: -9999, y: -9999, active: false, speed: 0, influence: 0, lastMove: -Infinity };
   let layout = { left: 46, top: 38, right: 14, bottom: 25, cellW: 10, cellH: 22, weeks: 46 };
 
-  const totalMillions = codexUsage.reduce((sum, day) => sum + day.millions, 0);
-  const activeDays = codexUsage.filter(day => day.millions > 0).length;
-  const averageMillions = totalMillions / codexUsage.length;
-  const sortedValues = [...codexUsage].sort((a, b) => b.millions - a.millions);
+  const reportedUsage = codexUsage.filter(day => day.tokens !== null);
+  const totalTokens = reportedUsage.reduce((sum, day) => sum + day.tokens, 0);
+  const reportedDays = reportedUsage.length;
+  const notReturnedDays = codexUsage.length - reportedDays;
+  const averageTokens = totalTokens / reportedDays;
+  const averageMillions = averageTokens / 1000000;
+  const sortedValues = [...reportedUsage].sort((a, b) => b.tokens - a.tokens);
   const peakDay = sortedValues[0];
   const maxValue = peakDay.millions;
   const rankByDate = new Map(sortedValues.map((day, index) => [day.date, index + 1]));
@@ -72,14 +424,16 @@
   gridStart.setDate(gridStart.getDate() - mondayIndex(gridStart));
   const weeks = Math.floor((lastDate - gridStart) / dayMs / 7) + 1;
 
-  function formatValue(value) {
-    if (value === 0) return "0 tokens";
-    if (value < 1) return `${numberFormat.format(value * 1000)} thousand tokens`;
-    return `${numberFormat.format(value)} million tokens`;
+  function formatValue(day) {
+    if (day.tokens === null) return "No usage bucket returned";
+    return `${exactTokenFormat.format(day.tokens)} tokens`;
   }
 
-  function formatMillions(value) {
-    return `${compactFormat.format(value)}M`;
+  function formatCompactTokens(tokens) {
+    if (tokens >= 1000000000) return `${compactFormat.format(tokens / 1000000000)}B`;
+    if (tokens >= 1000000) return `${compactFormat.format(tokens / 1000000)}M`;
+    if (tokens >= 1000) return `${compactFormat.format(tokens / 1000)}K`;
+    return exactTokenFormat.format(tokens);
   }
 
   function setText(selector, value) {
@@ -88,14 +442,17 @@
   }
 
   function populateSummary() {
-    const dateRange = `${dateFormat.format(firstDate)} through ${dateFormat.format(lastDate)}.`;
-    setText("[data-signal-total]", `${compactFormat.format(totalMillions / 1000)}B`);
-    setText("[data-signal-peak]", formatMillions(peakDay.millions));
-    setText("[data-signal-average]", formatMillions(averageMillions));
-    setText("[data-signal-active]", String(activeDays));
+    const dateRange = `${dateFormat.format(firstDate)} through ${dateFormat.format(lastDate)}`;
+    const coverage = `${reportedDays} dates returned usage; ${notReturnedDays} dates had no usage bucket returned.`;
+    setText("[data-signal-total]", formatCompactTokens(totalTokens));
+    setText("[data-signal-peak]", formatCompactTokens(peakDay.tokens));
+    setText("[data-signal-average]", formatCompactTokens(averageTokens));
+    setText("[data-signal-reported]", String(reportedDays));
     setText("[data-signal-days]", String(codexUsage.length));
-    setText("[data-signal-range]", dateRange);
-    canvas.setAttribute("aria-label", `Interactive calendar of daily Codex token usage from ${dateRange} Focus the field and use arrow keys to explore dates.`);
+    setText("[data-signal-range]", `${dateRange}.`);
+    setText("[data-signal-coverage]", coverage);
+    setText("[data-signal-legend-max]", `${formatCompactTokens(peakDay.tokens)} peak`);
+    canvas.setAttribute("aria-label", `Interactive calendar of daily Codex token usage from ${dateRange}. ${coverage} Focus the field and use arrow keys to explore dates.`);
   }
 
   function populateAccessibleTable() {
@@ -106,7 +463,7 @@
       const date = document.createElement("td");
       const value = document.createElement("td");
       date.textContent = dateFormat.format(parseLocalDate(day.date));
-      value.textContent = formatValue(day.millions);
+      value.textContent = formatValue(day);
       row.append(date, value);
       fragment.append(row);
     });
@@ -160,7 +517,7 @@
   }
 
   function intensityFor(value) {
-    if (value <= 0) return 0;
+    if (value === null || value <= 0) return 0;
     return Math.pow(value / maxValue, .38);
   }
 
@@ -283,7 +640,8 @@
         particleStart: particles.length
       };
 
-      const count = day.millions === 0 ? 1 : Math.round(3 + intensity * 18);
+      const dormant = day.tokens === null || day.tokens === 0;
+      const count = dormant ? 1 : Math.round(3 + intensity * 18);
       const spreadX = Math.max(1.3, layout.cellW * .3);
       const spreadY = Math.max(3, layout.cellH * .3);
 
@@ -292,7 +650,7 @@
         const radius = Math.sqrt(random());
         const baseX = x + Math.cos(angle) * radius * spreadX;
         const baseY = y + Math.sin(angle) * radius * spreadY;
-        const size = day.millions === 0 ? .55 : .48 + random() * (1.08 + intensity * .85);
+        const size = dormant ? .55 : .48 + random() * (1.08 + intensity * .85);
         particles.push({
           x: baseX,
           y: baseY,
@@ -305,7 +663,7 @@
           speed: .68 + random() * .92,
           drift: (2.1 + random() * 3.8) * motionScale,
           intensity,
-          dormant: day.millions === 0,
+          dormant,
           cell
         });
       }
@@ -324,7 +682,7 @@
     heatContext.clearRect(0, 0, width, height);
     heatContext.save();
     cells.forEach(cell => {
-      if (cell.millions === 0) return;
+      if (cell.tokens === null || cell.tokens === 0) return;
       const radius = Math.max(3.2, Math.min(layout.cellH * .48, 3.5 + cell.intensity * 10));
       const gradient = heatContext.createRadialGradient(cell.x, cell.y, 0, cell.x, cell.y, radius);
       gradient.addColorStop(0, colorFor(cell.intensity, (palette.light ? .11 : .16) + cell.intensity * .2));
@@ -556,13 +914,14 @@
   }
 
   function tooltipNoteFor(cell) {
-    if (cell.millions === 0) return "A recorded zero-use day.";
-    if (cell.rank === 1) return `Highest recorded day · ${(cell.millions / averageMillions).toFixed(1)}× the daily average.`;
+    if (cell.tokens === null) return "No usage bucket was returned for this date; it is not treated as zero.";
+    if (cell.tokens === 0) return "A reported zero-use day.";
+    if (cell.rank === 1) return `Highest recorded day · ${(cell.millions / averageMillions).toFixed(1)}× the reported-day average.`;
     if (cell.rank <= 5) {
       const ordinal = cell.rank === 2 ? "2nd" : cell.rank === 3 ? "3rd" : `${cell.rank}th`;
       return `Top-five day · ${ordinal} highest in the record.`;
     }
-    return `${(cell.millions / averageMillions).toFixed(1)}× the daily average · #${cell.rank} of ${codexUsage.length}.`;
+    return `${(cell.millions / averageMillions).toFixed(1)}× the reported-day average · #${cell.rank} of ${reportedDays} reported days.`;
   }
 
   function updateTooltip(cell, point, announce = false) {
@@ -576,7 +935,7 @@
 
     const note = tooltipNoteFor(cell);
     tooltipDate.textContent = dateFormat.format(cell.dateObject);
-    tooltipValue.textContent = formatValue(cell.millions);
+    tooltipValue.textContent = formatValue(cell);
     tooltipNote.textContent = note;
 
     const visualRect = visual.getBoundingClientRect();
@@ -595,7 +954,7 @@
     if (!motionAllowed() && width > 0 && height > 0) draw(false);
 
     if (announce && liveStatus) {
-      liveStatus.textContent = `${dateFormat.format(cell.dateObject)}: ${formatValue(cell.millions)}. ${note}`;
+      liveStatus.textContent = `${dateFormat.format(cell.dateObject)}: ${formatValue(cell)}. ${note}`;
     }
   }
 

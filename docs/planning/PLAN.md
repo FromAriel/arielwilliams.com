@@ -14,11 +14,11 @@ The project is Ariel Williams's public personal and consulting website. It must:
 - preserve direct email and copy-based contact fallbacks;
 - remain fast, accessible, private by default, and independent of a frontend framework.
 
-## Current phase: repository bootstrap complete; DNS cutover pending
+## Current phase: exact usage refresh and domain cutover acceptance
 
-The active phase separates the website from `CODEXVault_GODOT` and gives it an authoritative repository and root-level GitHub Pages deployment.
+Repository bootstrap is complete. The active follow-up refreshes the public Codex activity claim from the authenticated account endpoint and finishes verification of the GitHub Pages domain cutover.
 
-### Approved scope
+### Completed repository-bootstrap scope
 
 1. Create the public repository `FromAriel/arielwilliams.com`.
 2. Copy the exact production AW source from `FromAriel/CODEXVault_GODOT/tools/aw/` into the new repository root.
@@ -28,7 +28,7 @@ The active phase separates the website from `CODEXVault_GODOT` and gives it an a
 6. Attach `www.arielwilliams.com` as the GitHub Pages custom domain.
 7. Stop before changing Squarespace DNS; treat DNS cutover as a separately verified step.
 
-### Explicitly out of scope for this phase
+### Explicitly out of scope for repository bootstrap
 
 - Changing, deleting, or replacing Squarespace forwarding or DNS records.
 - Submitting the production Formspree questionnaire.
@@ -36,6 +36,23 @@ The active phase separates the website from `CODEXVault_GODOT` and gives it an a
 - Refreshing the Codex usage dataset.
 - Rewriting public credentials or claims.
 - Removing the legacy AW copy from `CODEXVault_GODOT`.
+
+### Authorized follow-up scope — 2026-08-09
+
+1. Retrieve the complete available daily Codex usage response with the locally audited `Get-CodexUsage.ps1` script.
+2. Publish only completed calendar days through August 8, 2026.
+3. Store exact integer token counts and preserve absent response buckets as `null`, not zero.
+4. Update derived metrics, accessible output, tooltips, legends, static fallbacks, and provenance records.
+5. Publish the reviewed change through an `agent/refresh-codex-usage` branch and draft pull request.
+6. Complete the Squarespace web-record cutover while preserving Domain Connect and Google verification records.
+7. Verify DNS propagation, GitHub certificate issuance, HTTPS enforcement, and public hostname behavior before closing the domain gate.
+
+### Explicitly out of scope for the follow-up
+
+- Publishing raw account JSON, prompts, messages, session identifiers, project paths, or opaque account-summary fields.
+- Publishing a partial current-day bucket.
+- Submitting the production Formspree questionnaire without separate authorization.
+- Redesigning the wider page or changing unrelated public claims.
 
 ## Source and provenance
 
@@ -76,7 +93,7 @@ GitHub must be configured with `www.arielwilliams.com`, not the apex hostname, s
 - `CNAME www -> fromariel.github.io`
 - GitHub Pages apex `A` records for `@`
 
-The current Squarespace forwarding rule remains in place until the new default Pages deployment and GitHub-side custom-domain attachment are verified.
+The Squarespace forwarding rule is now removed. The apex has the four GitHub Pages `A` records and `www` has `CNAME -> fromariel.github.io`. Domain Connect and Google verification records remain preserved. Certificate issuance and HTTPS enforcement are still pending acceptance checks.
 
 ## Release gates
 
@@ -94,7 +111,7 @@ Repository bootstrap is complete only when:
 
 ## Repository-bootstrap evidence
 
-As of 2026-08-09:
+At the initial 2026-08-09 bootstrap, before the later DNS changes:
 
 - Public repository: `https://github.com/FromAriel/arielwilliams.com`
 - Initial production commit: `4c49242b69db5b24c8935b820a8a5a989f8d71bc`
@@ -107,7 +124,25 @@ As of 2026-08-09:
 - Public `www` behavior remains unchanged: Squarespace returns the existing redirect to the legacy AW path
 - HTTPS enforcement remains off until DNS points to GitHub and a certificate can be issued
 
-DNS cutover is a later gate and requires:
+## Current follow-up evidence
+
+As of the authorized 2026-08-09 refresh:
+
+- Baseline `main` commit and Pages build: `3f4ba62cd79a758f249247997b77de21fe15aab6`, build `1141068199`, status `built`
+- Working branch: `agent/refresh-codex-usage`
+- Refresh publication: commit `04576aa1c88f09b2c4686d1406f559d579ecdf34` pushed in draft pull request `#1`
+- Usage retrieval: authenticated `account/usage/read` response at `2026-08-09T13:55:40.3147207Z`
+- Stable data range: August 30, 2025 through August 8, 2026
+- Data coverage: 344 calendar days, 332 returned buckets, 12 dates without a returned bucket
+- Exact total: 50,299,607,466 reported tokens
+- Peak: 1,782,168,715 tokens on July 17, 2026
+- Squarespace forwarding: removed
+- Apex DNS: all four GitHub Pages `A` records present
+- `www` DNS: `CNAME -> fromariel.github.io` added after an initial `NXDOMAIN` audit; Google and Cloudflare public resolvers now report a 1,800-second TTL
+- Preserved DNS: Domain Connect and Google verification CNAMEs remain present
+- Remaining domain work: matching certificate issuance, HTTPS enforcement, and final production interaction acceptance
+
+DNS cutover acceptance requires:
 
 - preserving unrelated DNS verification/service records;
 - removing the Squarespace forwarding preset;
@@ -129,6 +164,14 @@ Bootstrap from the exact deployed source under `CODEXVault_GODOT/tools/aw/`. Do 
 
 Create and validate the repository and Pages deployment before modifying Squarespace. This preserves the current public redirect until a replacement is ready.
 
+### 2026-08-09 — exact usage values and missing-bucket semantics
+
+Use the exact integer `tokens` values returned by `account/usage/read`. A date without a returned bucket is represented as `null` and disclosed as not returned; it is never converted into a claimed zero-use day.
+
+### 2026-08-09 — stable completed-day cutoff
+
+Publish through August 8, 2026, the latest completed local calendar day at retrieval time. Exclude August 9 because the current-day response may be incomplete or delayed.
+
 ## Next likely slice
 
-After repository bootstrap is accepted, perform a controlled Squarespace DNS cutover with before/after screenshots, exact record inventory, bounded propagation checks, GitHub domain verification, and HTTPS validation.
+Complete the usage-refresh pull request, then verify public DNS, GitHub certificate issuance, HTTPS enforcement, apex-to-`www` direction, the refreshed summary/table, and the production Pages deployment.
