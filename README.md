@@ -18,7 +18,7 @@ They were moved to this repository root so the site can be served directly from 
 
 - `index.html` contains the page structure, global styles, general interactions, and Formspree submission behavior.
 - `assets/signal-field.css` contains the scoped Codex activity-field styles.
-- `assets/signal-field.js` contains the recorded activity dataset, derived metrics, Canvas rendering, and accessible interaction behavior.
+- `assets/signal-field.js` contains the exact-token activity dataset, returned-bucket status, derived metrics, Canvas rendering, and accessible interaction behavior.
 - `assets/og-card.png` is the production social-sharing image.
 - `assets/og-card.svg` is the editable social-card source.
 - `favicon.svg` is the browser icon.
@@ -40,7 +40,7 @@ arielwilliams.com -> https://www.arielwilliams.com/
 www.arielwilliams.com -> this GitHub Pages site
 ```
 
-The Squarespace DNS cutover is intentionally separate from repository bootstrap. Do not remove the existing forwarding rule until this repository's default Pages deployment has been validated and the GitHub custom-domain setting has been attached.
+Squarespace DNS now points the apex to GitHub Pages and `www` to `fromariel.github.io`; the old forwarding rule is removed. The unrelated Domain Connect and Google verification CNAMEs remain preserved. GitHub Pages must issue the custom-domain certificate before HTTPS enforcement is enabled.
 
 ## External behavior and privacy
 
