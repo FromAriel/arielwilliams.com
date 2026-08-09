@@ -11,20 +11,20 @@ This checklist implements `PLAN.md`. A checked item means current evidence exist
 - [x] Add root `AGENTS.md`.
 - [x] Add `PLAN.md`, `CHECKLIST.md`, and the research entry point.
 - [x] Add the intended `CNAME` value, `www.arielwilliams.com`.
-- [ ] Verify copied source parity and static integrity checks.
-- [ ] Initialize the local Git repository on `main`.
-- [ ] Review the complete initial diff and staged scope.
-- [ ] Create the public GitHub repository.
-- [ ] Commit and push the initial `main` branch.
+- [x] Verify copied source parity and static integrity checks.
+- [x] Initialize the local Git repository on `main`.
+- [x] Review the complete initial diff and staged scope.
+- [x] Create the public GitHub repository.
+- [x] Commit and push the initial `main` branch.
 
 ## GitHub Pages
 
-- [ ] Enable Pages from `main` and `/ (root)`.
-- [ ] Confirm the Pages build reaches `built` status.
-- [ ] Fetch and validate the default project Pages URL.
-- [ ] Attach `www.arielwilliams.com` as the GitHub custom domain.
-- [ ] Record the Pages configuration and deployment commit.
-- [ ] Confirm the existing Squarespace forwarding rule still serves the current site.
+- [x] Enable Pages from `main` and `/ (root)`.
+- [x] Confirm the Pages build reaches `built` status.
+- [x] Confirm the default project Pages URL redirects to the custom hostname and validate the forced GitHub origin response.
+- [x] Attach `www.arielwilliams.com` as the GitHub custom domain.
+- [x] Record Pages build `1141063827` and deployment commit `4c49242b69db5b24c8935b820a8a5a989f8d71bc`.
+- [x] Confirm the existing Squarespace forwarding rule still serves the current site.
 
 ## Squarespace DNS cutover — not authorized in repository-bootstrap turn
 

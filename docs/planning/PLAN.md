@@ -14,7 +14,7 @@ The project is Ariel Williams's public personal and consulting website. It must:
 - preserve direct email and copy-based contact fallbacks;
 - remain fast, accessible, private by default, and independent of a frontend framework.
 
-## Current phase: repository bootstrap and domain cutover
+## Current phase: repository bootstrap complete; DNS cutover pending
 
 The active phase separates the website from `CODEXVault_GODOT` and gives it an authoritative repository and root-level GitHub Pages deployment.
 
@@ -87,10 +87,25 @@ Repository bootstrap is complete only when:
 - copied production files match the pinned source semantically and binaries match exactly;
 - JavaScript syntax, JSON-LD, local asset references, and in-page anchors validate;
 - GitHub Pages reports a built deployment from `main` and `/`;
-- the default Pages URL is fetched successfully before custom-domain redirection;
+- the default Pages URL redirects to the registered custom hostname and the forced GitHub origin serves the intended site before DNS changes;
 - GitHub reports `www.arielwilliams.com` as the configured custom domain;
 - the working tree is clean and the exact commit is recorded;
 - Squarespace remains unchanged.
+
+## Repository-bootstrap evidence
+
+As of 2026-08-09:
+
+- Public repository: `https://github.com/FromAriel/arielwilliams.com`
+- Initial production commit: `4c49242b69db5b24c8935b820a8a5a989f8d71bc`
+- Pages source: `main`, `/ (root)`
+- Pages build: `1141063827`, status `built`, no reported build error
+- Custom domain registered by GitHub Pages: `www.arielwilliams.com`
+- GitHub origin validation: an HTTP request forced to the GitHub Pages origin returned `200 OK` with the expected title, canonical URL, Open Graph URL, and activity-field script reference
+- Default project URL behavior: `https://fromariel.github.io/arielwilliams.com/` redirects to the registered custom hostname
+- Public DNS remains on Squarespace: `www` resolves to `ext-sq.squarespace.com`, while the apex resolves to the four Squarespace forwarding addresses
+- Public `www` behavior remains unchanged: Squarespace returns the existing redirect to the legacy AW path
+- HTTPS enforcement remains off until DNS points to GitHub and a certificate can be issued
 
 DNS cutover is a later gate and requires:
 
