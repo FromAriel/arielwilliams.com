@@ -130,6 +130,7 @@ As of the authorized 2026-08-09 refresh:
 
 - Baseline `main` commit and Pages build: `3f4ba62cd79a758f249247997b77de21fe15aab6`, build `1141068199`, status `built`
 - Working branch: `agent/refresh-codex-usage`
+- Refresh publication: commit `04576aa1c88f09b2c4686d1406f559d579ecdf34` pushed in draft pull request `#1`
 - Usage retrieval: authenticated `account/usage/read` response at `2026-08-09T13:55:40.3147207Z`
 - Stable data range: August 30, 2025 through August 8, 2026
 - Data coverage: 344 calendar days, 332 returned buckets, 12 dates without a returned bucket
@@ -139,7 +140,7 @@ As of the authorized 2026-08-09 refresh:
 - Apex DNS: all four GitHub Pages `A` records present
 - `www` DNS: `CNAME -> fromariel.github.io` added after an initial `NXDOMAIN` audit; Google and Cloudflare public resolvers now report a 1,800-second TTL
 - Preserved DNS: Domain Connect and Google verification CNAMEs remain present
-- Remaining domain work: public propagation, matching certificate issuance, HTTPS enforcement, and browser acceptance
+- Remaining domain work: matching certificate issuance, HTTPS enforcement, and final production interaction acceptance
 
 DNS cutover acceptance requires:
 

@@ -38,8 +38,8 @@ This checklist implements `PLAN.md`. A checked item means current evidence exist
 - [x] Document retrieval, transformation, historical corrections, and privacy boundaries.
 - [x] Run the complete data, JavaScript, HTML, reference, and whitespace validation suite.
 - [x] Review the exact diff and confirm no raw account response or sensitive data is staged.
-- [ ] Commit and push `agent/refresh-codex-usage`.
-- [ ] Open a draft pull request to `main`.
+- [x] Commit and push `agent/refresh-codex-usage` at `04576aa1c88f09b2c4686d1406f559d579ecdf34`.
+- [x] Open draft pull request `#1` to `main`.
 - [ ] Merge after review and confirm the production Pages deployment.
 
 ## Squarespace DNS cutover and acceptance
