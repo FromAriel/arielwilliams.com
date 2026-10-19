@@ -48,7 +48,7 @@ The `www` record was added after the initial audit found a partial cutover in wh
 
 ## Current usage-data provenance
 
-The exact retrieval and transformation evidence for the current Codex activity refresh lives in [`CODEX_USAGE_REFRESH_2026-08-09.md`](CODEX_USAGE_REFRESH_2026-08-09.md). The bootstrap values above remain historical evidence and must not be mistaken for the current public dataset.
+The current combined-history refresh is documented in [`CODEX_USAGE_REFRESH_2026-10-19.md`](CODEX_USAGE_REFRESH_2026-10-19.md). It retains older recorded values from the [August 9 snapshot](CODEX_USAGE_REFRESH_2026-08-09.md), extends through October 18, and applies Ariel's explicit designation of nineteen zero days. Earlier bootstrap and snapshot figures remain historical evidence.
 
 ## Presentation snapshot provenance — 2026-10-19
 

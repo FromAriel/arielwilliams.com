@@ -34,8 +34,8 @@
     { date: "2025-09-28", tokens: 74921357 },
     { date: "2025-09-29", tokens: 96159931 },
     { date: "2025-09-30", tokens: 240416 },
-    { date: "2025-10-01", tokens: null },
-    { date: "2025-10-02", tokens: null },
+    { date: "2025-10-01", tokens: 0, designatedZero: true },
+    { date: "2025-10-02", tokens: 0, designatedZero: true },
     { date: "2025-10-03", tokens: 262434365 },
     { date: "2025-10-04", tokens: 23947594 },
     { date: "2025-10-05", tokens: 84111510 },
@@ -160,7 +160,7 @@
     { date: "2026-02-01", tokens: 32531671 },
     { date: "2026-02-02", tokens: 146155928 },
     { date: "2026-02-03", tokens: 39655714 },
-    { date: "2026-02-04", tokens: null },
+    { date: "2026-02-04", tokens: 0, designatedZero: true },
     { date: "2026-02-05", tokens: 19376286 },
     { date: "2026-02-06", tokens: 49561635 },
     { date: "2026-02-07", tokens: 86092190 },
@@ -179,7 +179,7 @@
     { date: "2026-02-20", tokens: 36736588 },
     { date: "2026-02-21", tokens: 23733546 },
     { date: "2026-02-22", tokens: 71794348 },
-    { date: "2026-02-23", tokens: null },
+    { date: "2026-02-23", tokens: 0, designatedZero: true },
     { date: "2026-02-24", tokens: 97659506 },
     { date: "2026-02-25", tokens: 39638232 },
     { date: "2026-02-26", tokens: 40020195 },
@@ -208,7 +208,7 @@
     { date: "2026-03-21", tokens: 33240490 },
     { date: "2026-03-22", tokens: 31875219 },
     { date: "2026-03-23", tokens: 95569790 },
-    { date: "2026-03-24", tokens: null },
+    { date: "2026-03-24", tokens: 0, designatedZero: true },
     { date: "2026-03-25", tokens: 62099352 },
     { date: "2026-03-26", tokens: 181777347 },
     { date: "2026-03-27", tokens: 73179032 },
@@ -234,15 +234,15 @@
     { date: "2026-04-16", tokens: 38076403 },
     { date: "2026-04-17", tokens: 97598979 },
     { date: "2026-04-18", tokens: 14290005 },
-    { date: "2026-04-19", tokens: null },
-    { date: "2026-04-20", tokens: null },
-    { date: "2026-04-21", tokens: null },
-    { date: "2026-04-22", tokens: null },
+    { date: "2026-04-19", tokens: 0, designatedZero: true },
+    { date: "2026-04-20", tokens: 0, designatedZero: true },
+    { date: "2026-04-21", tokens: 0, designatedZero: true },
+    { date: "2026-04-22", tokens: 0, designatedZero: true },
     { date: "2026-04-23", tokens: 27349917 },
     { date: "2026-04-24", tokens: 96208501 },
     { date: "2026-04-25", tokens: 29015854 },
     { date: "2026-04-26", tokens: 6017805 },
-    { date: "2026-04-27", tokens: null },
+    { date: "2026-04-27", tokens: 0, designatedZero: true },
     { date: "2026-04-28", tokens: 67424465 },
     { date: "2026-04-29", tokens: 67431470 },
     { date: "2026-04-30", tokens: 18276100 },
@@ -283,8 +283,8 @@
     { date: "2026-06-04", tokens: 60573986 },
     { date: "2026-06-05", tokens: 110232409 },
     { date: "2026-06-06", tokens: 1945385 },
-    { date: "2026-06-07", tokens: null },
-    { date: "2026-06-08", tokens: null },
+    { date: "2026-06-07", tokens: 0, designatedZero: true },
+    { date: "2026-06-08", tokens: 0, designatedZero: true },
     { date: "2026-06-09", tokens: 43834919 },
     { date: "2026-06-10", tokens: 18661327 },
     { date: "2026-06-11", tokens: 206118004 },
@@ -341,11 +341,82 @@
     { date: "2026-08-01", tokens: 265473083 },
     { date: "2026-08-02", tokens: 1312951449 },
     { date: "2026-08-03", tokens: 1282054348 },
-    { date: "2026-08-04", tokens: 984472942 },
-    { date: "2026-08-05", tokens: 93106343 },
+    { date: "2026-08-04", tokens: 984084687 },
+    { date: "2026-08-05", tokens: 93049822 },
     { date: "2026-08-06", tokens: 143237587 },
     { date: "2026-08-07", tokens: 228672768 },
-    { date: "2026-08-08", tokens: 1037195855 }
+    { date: "2026-08-08", tokens: 1037195855 },
+    { date: "2026-08-09", tokens: 1160106124 },
+    { date: "2026-08-10", tokens: 1418220870 },
+    { date: "2026-08-11", tokens: 2983117301 },
+    { date: "2026-08-12", tokens: 1252983282 },
+    { date: "2026-08-13", tokens: 256765334 },
+    { date: "2026-08-14", tokens: 0, designatedZero: true },
+    { date: "2026-08-15", tokens: 279061 },
+    { date: "2026-08-16", tokens: 0, designatedZero: true },
+    { date: "2026-08-17", tokens: 0, designatedZero: true },
+    { date: "2026-08-18", tokens: 291301 },
+    { date: "2026-08-19", tokens: 0, designatedZero: true },
+    { date: "2026-08-20", tokens: 260808886 },
+    { date: "2026-08-21", tokens: 0, designatedZero: true },
+    { date: "2026-08-22", tokens: 9366097 },
+    { date: "2026-08-23", tokens: 9674161 },
+    { date: "2026-08-24", tokens: 101208961 },
+    { date: "2026-08-25", tokens: 75753608 },
+    { date: "2026-08-26", tokens: 62916829 },
+    { date: "2026-08-27", tokens: 126823336 },
+    { date: "2026-08-28", tokens: 149590324 },
+    { date: "2026-08-29", tokens: 905341 },
+    { date: "2026-08-30", tokens: 80161413 },
+    { date: "2026-08-31", tokens: 112317366 },
+    { date: "2026-09-01", tokens: 85318516 },
+    { date: "2026-09-02", tokens: 3709050 },
+    { date: "2026-09-03", tokens: 0, designatedZero: true },
+    { date: "2026-09-04", tokens: 740166637 },
+    { date: "2026-09-05", tokens: 448143478 },
+    { date: "2026-09-06", tokens: 106797517 },
+    { date: "2026-09-07", tokens: 0, designatedZero: true },
+    { date: "2026-09-08", tokens: 167907624 },
+    { date: "2026-09-09", tokens: 31377095 },
+    { date: "2026-09-10", tokens: 80025581 },
+    { date: "2026-09-11", tokens: 10449219 },
+    { date: "2026-09-12", tokens: 57557215 },
+    { date: "2026-09-13", tokens: 106142752 },
+    { date: "2026-09-14", tokens: 41914430 },
+    { date: "2026-09-15", tokens: 5261125 },
+    { date: "2026-09-16", tokens: 3667790 },
+    { date: "2026-09-17", tokens: 2563476 },
+    { date: "2026-09-18", tokens: 6956523 },
+    { date: "2026-09-19", tokens: 107356062 },
+    { date: "2026-09-20", tokens: 191809317 },
+    { date: "2026-09-21", tokens: 81660554 },
+    { date: "2026-09-22", tokens: 105232754 },
+    { date: "2026-09-23", tokens: 114203103 },
+    { date: "2026-09-24", tokens: 233108987 },
+    { date: "2026-09-25", tokens: 242849740 },
+    { date: "2026-09-26", tokens: 180102757 },
+    { date: "2026-09-27", tokens: 142923059 },
+    { date: "2026-09-28", tokens: 193219315 },
+    { date: "2026-09-29", tokens: 32202240 },
+    { date: "2026-09-30", tokens: 246430403 },
+    { date: "2026-10-01", tokens: 146451516 },
+    { date: "2026-10-02", tokens: 229695757 },
+    { date: "2026-10-03", tokens: 397036248 },
+    { date: "2026-10-04", tokens: 332696817 },
+    { date: "2026-10-05", tokens: 531528322 },
+    { date: "2026-10-06", tokens: 272868296 },
+    { date: "2026-10-07", tokens: 360530102 },
+    { date: "2026-10-08", tokens: 332953621 },
+    { date: "2026-10-09", tokens: 452652027 },
+    { date: "2026-10-10", tokens: 346608338 },
+    { date: "2026-10-11", tokens: 960529329 },
+    { date: "2026-10-12", tokens: 354705030 },
+    { date: "2026-10-13", tokens: 392300852 },
+    { date: "2026-10-14", tokens: 318335754 },
+    { date: "2026-10-15", tokens: 296870681 },
+    { date: "2026-10-16", tokens: 860923003 },
+    { date: "2026-10-17", tokens: 528340635 },
+    { date: "2026-10-18", tokens: 431732645 }
   ];
   const codexUsage = rawCodexUsage.map(day => ({
     ...day,
@@ -401,11 +472,11 @@
   let pointer = { x: -9999, y: -9999, active: false, speed: 0, influence: 0, lastMove: -Infinity };
   let layout = { left: 46, top: 38, right: 14, bottom: 25, cellW: 10, cellH: 22, weeks: 46 };
 
-  const reportedUsage = codexUsage.filter(day => day.tokens !== null);
+  const reportedUsage = codexUsage.filter(day => day.tokens !== null && !day.designatedZero);
   const totalTokens = reportedUsage.reduce((sum, day) => sum + day.tokens, 0);
   const reportedDays = reportedUsage.length;
-  const notReturnedDays = codexUsage.length - reportedDays;
-  const averageTokens = totalTokens / reportedDays;
+  const designatedZeroDays = codexUsage.filter(day => day.designatedZero).length;
+  const averageTokens = totalTokens / codexUsage.length;
   const averageMillions = averageTokens / 1000000;
   const sortedValues = [...reportedUsage].sort((a, b) => b.tokens - a.tokens);
   const peakDay = sortedValues[0];
@@ -443,7 +514,7 @@
 
   function populateSummary() {
     const dateRange = `${dateFormat.format(firstDate)} through ${dateFormat.format(lastDate)}`;
-    const coverage = `${reportedDays} dates returned usage; ${notReturnedDays} dates had no usage bucket returned.`;
+    const coverage = `${reportedDays} days have recorded usage; ${designatedZeroDays} days are designated zero. Older recorded values are preserved from the previous snapshot.`;
     setText("[data-signal-total]", formatCompactTokens(totalTokens));
     setText("[data-signal-peak]", formatCompactTokens(peakDay.tokens));
     setText("[data-signal-average]", formatCompactTokens(averageTokens));
@@ -915,13 +986,14 @@
 
   function tooltipNoteFor(cell) {
     if (cell.tokens === null) return "No usage bucket was returned for this date; it is not treated as zero.";
+    if (cell.designatedZero) return "Designated zero by Ariel; no usage bucket was returned for this date.";
     if (cell.tokens === 0) return "A reported zero-use day.";
-    if (cell.rank === 1) return `Highest recorded day · ${(cell.millions / averageMillions).toFixed(1)}× the reported-day average.`;
+    if (cell.rank === 1) return `Highest recorded day · ${(cell.millions / averageMillions).toFixed(1)}× the calendar-day average.`;
     if (cell.rank <= 5) {
       const ordinal = cell.rank === 2 ? "2nd" : cell.rank === 3 ? "3rd" : `${cell.rank}th`;
       return `Top-five day · ${ordinal} highest in the record.`;
     }
-    return `${(cell.millions / averageMillions).toFixed(1)}× the reported-day average · #${cell.rank} of ${reportedDays} reported days.`;
+    return `${(cell.millions / averageMillions).toFixed(1)}× the calendar-day average · #${cell.rank} of ${reportedDays} recorded days.`;
   }
 
   function updateTooltip(cell, point, announce = false) {

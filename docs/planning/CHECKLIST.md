@@ -2,6 +2,17 @@
 
 This checklist implements `PLAN.md`. A checked item means current evidence exists; it does not imply later DNS or release gates are complete.
 
+## Combined usage refresh — 2026-10-19
+
+- [x] Retrieve completed-day usage through October 18 using the audited account reader.
+- [x] Preserve 48 older recorded days omitted by the latest response and apply two returned historical corrections.
+- [x] Extend to 415 days, with 396 recorded counts and nineteen user-designated zeros.
+- [x] Update exact dataset, summary, calendar-day average, accessible table, zero tooltips, legend, and static fallbacks.
+- [x] Document the explicit zero designation and combined-source provenance.
+- [x] Complete source/reference/whitespace checks and review the publication diff (exact data/preservation, JavaScript, inline scripts, JSON-LD, 19 local references, unique IDs, ARIA references).
+- [ ] Commit, push, and verify GitHub Pages deployment.
+- [ ] Verify public source parity and normal browser tracker behavior.
+
 ## Repository bootstrap
 
 - [x] Confirm GitHub CLI authentication as `FromAriel`.

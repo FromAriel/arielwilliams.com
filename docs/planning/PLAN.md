@@ -14,7 +14,15 @@ The project is Ariel Williams's public personal and consulting website. It must:
 - preserve direct email and copy-based contact fallbacks;
 - remain fast, accessible, private by default, and independent of a frontend framework.
 
-## Current phase: presentation snapshots published; extended acceptance deferred
+## Current phase: combined usage tracker refresh and publication
+
+Ariel authorized publishing combined daily usage through October 18, 2026: preserve the 48 historical days omitted from the latest response, use current returned values for the overlap, and label the nineteen remaining absent buckets as zero. Store those nineteen rows with `designatedZero: true` and explain their provenance publicly. This instruction is a specific exception to the older missing-bucket/null policy below.
+
+The refreshed dataset contains 415 dates, 396 recorded-count days, nineteen designated zeros, and 69,676,267,577 tokens. Peak is 2,983,117,301 on August 11. Average now includes zero days and is labeled per calendar day (167.9M). Retrieval, merge rules, exact corrections, checks, and publication evidence live in `docs/research/CODEX_USAGE_REFRESH_2026-10-19.md`.
+
+The scope includes a focused commit/push, existing GitHub Pages deployment, and public tracker verification. Slide pages, the Google Slides source, video, DNS, and form delivery are unchanged.
+
+## Previous phase: presentation snapshot publication
 
 Repository bootstrap, the usage-refresh merge, and local snapshot preparation are complete. Ariel subsequently authorized making the twelve snapshot pages accessible on the existing arielwilliams.com domain. The active slice publishes the prepared bundle through the existing GitHub Pages main/root configuration and verifies its public pages and assets.
 
