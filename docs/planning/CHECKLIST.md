@@ -84,8 +84,8 @@ This checklist implements `PLAN.md`. A checked item means current evidence exist
 
 - [x] Verify remote main still matches the local baseline and rerun snapshot static checks.
 - [x] Confirm GitHub Pages main/root source, canonical domain, and HTTPS enforcement.
-- [ ] Commit and push only the prepared snapshot bundle and intended documentation.
-- [ ] Confirm GitHub Pages deployment for the publication commit.
-- [ ] Verify all twelve public HTML pages, twelve PNGs, and the shared stylesheet.
-- [ ] Verify apex-to-www behavior and a normal public browser load.
-- [ ] Record exact publication commit and deployment evidence.
+- [x] Commit and push only the prepared snapshot bundle and intended documentation (`f2bc12ffb21a5e1ad5ac6b695a623508f4091f6d`).
+- [x] Confirm GitHub Pages deployment for the publication commit (build `1297152011`, built, no error).
+- [x] Verify all twelve public HTML pages, twelve PNGs, and the shared stylesheet (25 HTTPS 200 responses; exact local byte matches).
+- [x] Verify apex-to-www behavior and a normal public browser load (Slide 1 loads; next navigation opens Slide 2).
+- [x] Record exact publication commit and deployment evidence.

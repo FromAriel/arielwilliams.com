@@ -14,7 +14,7 @@ The project is Ariel Williams's public personal and consulting website. It must:
 - preserve direct email and copy-based contact fallbacks;
 - remain fast, accessible, private by default, and independent of a frontend framework.
 
-## Current phase: authorized presentation snapshot publication
+## Current phase: presentation snapshots published; extended acceptance deferred
 
 Repository bootstrap, the usage-refresh merge, and local snapshot preparation are complete. Ariel subsequently authorized making the twelve snapshot pages accessible on the existing arielwilliams.com domain. The active slice publishes the prepared bundle through the existing GitHub Pages main/root configuration and verifies its public pages and assets.
 
@@ -22,7 +22,7 @@ Repository bootstrap, the usage-refresh merge, and local snapshot preparation ar
 
 Ariel's follow-up request to make the prepared pages accessible on the existing domain supersedes the local-only stopping point below. It authorizes a focused commit/push of the prepared pages and documentation, deployment verification, and public browser inspection. It does not authorize changes to the Google Slides source, video, homepage, DNS, or form delivery.
 
-Pre-publication checks: remote `main` equals local baseline `9b2925fbdc305b5ac7f41e1d362eb04331fde4f8`; GitHub Pages reports main/root, `www.arielwilliams.com`, built status, and HTTPS enforcement enabled. The twelve-page static validation suite passed again before publication. Public page/asset verification and the exact deployed commit will be recorded after deployment.
+Publication completed at `f2bc12ffb21a5e1ad5ac6b695a623508f4091f6d`; Pages build `1297152011` reached `built` at `2026-10-19T13:59:08Z` without an error. All twelve HTML pages, twelve PNG snapshots, and the shared stylesheet returned HTTPS 200 and matched local bytes exactly. The active resolver points www to `fromariel.github.io` and apex to the four GitHub Pages addresses. Default TLS validation passed; HTTP and apex HTTPS slide requests resolve to canonical HTTPS www. Normal browser loading of Slide 1 and next-slide navigation to Slide 2 passed. Comprehensive responsive, keyboard, screen-reader, and print acceptance remains deferred. Full evidence is in the snapshot research note.
 
 ### Authorized local snapshot scope — 2026-10-19
 
@@ -195,4 +195,4 @@ Publish through August 8, 2026, the latest completed local calendar day at retri
 
 ## Next likely slice
 
-Publish the prepared pages under the newly authorized scope and verify all twelve public pages, their snapshot images, the shared stylesheet, HTTPS, and a normal browser load. Record deployment evidence; keep comprehensive responsive, screen-reader, and print acceptance distinct from public availability checks.
+The twelve snapshot pages are publicly accessible. The next optional slice is comprehensive responsive, keyboard, screen-reader, and print acceptance. The original Google Slides source and video remain unchanged; future snapshot refreshes require a new capture request.

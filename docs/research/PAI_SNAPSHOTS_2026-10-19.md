@@ -97,7 +97,20 @@ This is a zero-build static release bundle. No dependency installation, compilat
 
 After local delivery, Ariel requested that the pages be accessible on the existing arielwilliams.com domain. This supersedes the initial local-only stopping point above and authorizes a focused commit/push, existing Pages deployment, and public verification. The original deck, video, homepage, DNS, and form behavior remain outside this change.
 
-Immediately before publication, `git ls-remote` confirmed remote main at the local baseline `9b2925fbdc305b5ac7f41e1d362eb04331fde4f8`. The Pages API reported `main`, `/`, custom domain `www.arielwilliams.com`, status `built`, and `https_enforced: true`. The complete twelve-page static validation suite passed again. Deployment commit and public evidence will be recorded after publishing.
+Immediately before publication, `git ls-remote` confirmed remote main at the local baseline `9b2925fbdc305b5ac7f41e1d362eb04331fde4f8`. The Pages API reported `main`, `/`, custom domain `www.arielwilliams.com`, status `built`, and `https_enforced: true`. The complete twelve-page static validation suite passed again.
+
+### Verified public release
+
+- Publication commit: `f2bc12ffb21a5e1ad5ac6b695a623508f4091f6d` on `main`.
+- GitHub Pages build: `1297152011`; created `2026-10-19T13:58:41Z`, built `2026-10-19T13:59:08Z`, no reported error.
+- All twelve `https://www.arielwilliams.com/PBA/PAI/SlideN.html` pages returned HTTP 200 with exact local HTML bytes.
+- All twelve snapshot PNGs and the shared stylesheet returned HTTPS 200 and matched local bytes exactly. The image hashes above therefore also identify the publicly served images.
+- Certificate validation passed using the normal HTTPS client trust configuration; no certificate bypass was used. GitHub reports HTTPS enforcement enabled.
+- Active local DNS resolver: `www.arielwilliams.com` CNAME to `fromariel.github.io`; apex A addresses `185.199.108.153`, `185.199.109.153`, `185.199.110.153`, `185.199.111.153`.
+- `http://arielwilliams.com/PBA/PAI/Slide1.html`, `https://arielwilliams.com/PBA/PAI/Slide1.html`, and `http://www.arielwilliams.com/PBA/PAI/Slide1.html` all resolved to `https://www.arielwilliams.com/PBA/PAI/Slide1.html` with final status 200.
+- Normal in-app browser load of Slide 1 showed the styled page, loaded snapshot, transcript, and navigation. Clicking its next-slide link opened Slide 2 at the correct HTTPS URL with the matching heading and transcript.
+- Remaining acceptance: comprehensive responsive, keyboard, screen-reader, and print review. This limited browser check establishes normal public loading and basic navigation, not exhaustive accessibility acceptance.
+- Original Google Slides deck, inserted video, homepage, DNS configuration, and form behavior were unchanged. No pull request was created; publication used the existing main/root Pages lane.
 
 ## Continuity correction
 
