@@ -14,9 +14,30 @@ The project is Ariel Williams's public personal and consulting website. It must:
 - preserve direct email and copy-based contact fallbacks;
 - remain fast, accessible, private by default, and independent of a frontend framework.
 
-## Current phase: exact usage refresh and domain cutover acceptance
+## Current phase: authorized presentation snapshot publication
 
-Repository bootstrap is complete. The active follow-up refreshes the public Codex activity claim from the authenticated account endpoint and finishes verification of the GitHub Pages domain cutover.
+Repository bootstrap, the usage-refresh merge, and local snapshot preparation are complete. Ariel subsequently authorized making the twelve snapshot pages accessible on the existing arielwilliams.com domain. The active slice publishes the prepared bundle through the existing GitHub Pages main/root configuration and verifies its public pages and assets.
+
+### Publication authorization — 2026-10-19
+
+Ariel's follow-up request to make the prepared pages accessible on the existing domain supersedes the local-only stopping point below. It authorizes a focused commit/push of the prepared pages and documentation, deployment verification, and public browser inspection. It does not authorize changes to the Google Slides source, video, homepage, DNS, or form delivery.
+
+Pre-publication checks: remote `main` equals local baseline `9b2925fbdc305b5ac7f41e1d362eb04331fde4f8`; GitHub Pages reports main/root, `www.arielwilliams.com`, built status, and HTTPS enforcement enabled. The twelve-page static validation suite passed again before publication. Public page/asset verification and the exact deployed commit will be recorded after deployment.
+
+### Authorized local snapshot scope — 2026-10-19
+
+- Create `PBA/PAI/Slide1.html` through `Slide12.html`, preserving the exact footer paths.
+- Capture the twelve numbered slides from the read-only Google Slides source as full-frame 1920 × 1080 PNGs; omit the inserted video slide.
+- Include expanded semantic transcripts, native tables, visible image text, previous/next navigation, all-slide navigation, and source/image links.
+- Preserve the original deck, video, homepage, and hosting configuration.
+- Stop at local review-ready files. No staging, commits, pushes, publication, DNS changes, form submissions, server launch, or full-site browser session are authorized by this slice.
+- Record source revision, capture timestamp, slide mapping, image hashes, and validation in `docs/research/PAI_SNAPSHOTS_2026-10-19.md`.
+
+Local artifact preparation is complete: twelve HTML pages, twelve visually inspected full-frame PNGs, and one shared stylesheet. Static validation passed for 308 local references, 122 native text objects, 51 transcribed image-text entries, both semantic tables, image hashes/dimensions, and HTML structure. Source-level responsive/print/focus rules are present; browser acceptance and publication remain pending. This zero-build bundle needs no compilation step.
+
+### Local continuity correction — 2026-10-19
+
+Local Git history confirms usage-refresh PR #1 merged at `8223d8882278c962e79ba2a363c291a1ce3a9298` on August 9, 2026. Local `main` and cached `origin/main` point to `9b2925fbdc305b5ac7f41e1d362eb04331fde4f8` (`Create CNAME`, August 25). The current `CNAME` is `www.arielwilliams.com`. These local facts do not establish current remote or production deployment state; no fetch or live domain verification was performed for this slice.
 
 ### Completed repository-bootstrap scope
 
@@ -174,4 +195,4 @@ Publish through August 8, 2026, the latest completed local calendar day at retri
 
 ## Next likely slice
 
-Complete the usage-refresh pull request, then verify public DNS, GitHub certificate issuance, HTTPS enforcement, apex-to-`www` direction, the refreshed summary/table, and the production Pages deployment.
+Publish the prepared pages under the newly authorized scope and verify all twelve public pages, their snapshot images, the shared stylesheet, HTTPS, and a normal browser load. Record deployment evidence; keep comprehensive responsive, screen-reader, and print acceptance distinct from public availability checks.

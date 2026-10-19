@@ -50,6 +50,10 @@ The `www` record was added after the initial audit found a partial cutover in wh
 
 The exact retrieval and transformation evidence for the current Codex activity refresh lives in [`CODEX_USAGE_REFRESH_2026-08-09.md`](CODEX_USAGE_REFRESH_2026-08-09.md). The bootstrap values above remain historical evidence and must not be mistaken for the current public dataset.
 
+## Presentation snapshot provenance — 2026-10-19
+
+The twelve local presentation pages and their fixed image captures are documented in [`PAI_SNAPSHOTS_2026-10-19.md`](PAI_SNAPSHOTS_2026-10-19.md). That record identifies the source revision, exact footer mapping, capture timestamp, hashes, transcript method, local checks, and pending browser/publication gates. The Google Slides source and inserted video remain unchanged.
+
 ## Validation interpretation
 
 Static source checks and a successful GitHub Pages build establish artifact integrity. They do not by themselves validate:

@@ -40,7 +40,8 @@ This checklist implements `PLAN.md`. A checked item means current evidence exist
 - [x] Review the exact diff and confirm no raw account response or sensitive data is staged.
 - [x] Commit and push `agent/refresh-codex-usage` at `04576aa1c88f09b2c4686d1406f559d579ecdf34`.
 - [x] Open draft pull request `#1` to `main`.
-- [ ] Merge after review and confirm the production Pages deployment.
+- [x] Confirm PR #1 merged at `8223d8882278c962e79ba2a363c291a1ce3a9298` (local history verified October 19).
+- [ ] Confirm the production Pages deployment separately; the merge alone does not establish live acceptance.
 
 ## Squarespace DNS cutover and acceptance
 
@@ -65,3 +66,26 @@ This checklist implements `PLAN.md`. A checked item means current evidence exist
 - [ ] Review public credential wording and outbound links.
 - [ ] Align privacy wording with Formspree data handling.
 - [ ] Add repeatable HTML, link, accessibility, and responsive-release checks.
+
+## Local presentation snapshots — 2026-10-19
+
+- [x] Confirm the current source revision and all twelve numbered footer paths; exclude the inserted video.
+- [x] Capture and visually inspect twelve complete 1920 × 1080 PNG snapshots.
+- [x] Create twelve exact-case footer pages with expanded transcripts and no JavaScript dependency.
+- [x] Include native table contents, image-based assessment labels, the quoted post, and application screenshot text.
+- [x] Add previous/next navigation, a current-page-marked all-slide list, source links, and full-resolution image links.
+- [x] Add shared responsive, keyboard-focus, overflow-table, and print styles.
+- [x] Complete static HTML, case-sensitive references, navigation, transcript coverage, PNG integrity, and whitespace checks (12 pages; 308 local references; 122 native text objects; 51 image-text entries).
+- [x] Record final checks and image hashes in the research snapshot note.
+- [ ] Perform authorized browser-based responsive, keyboard, and print acceptance.
+- [x] Obtain separate publication authorization before any Git write or deployment (Ariel's October 19 follow-up).
+
+## Presentation publication — 2026-10-19
+
+- [x] Verify remote main still matches the local baseline and rerun snapshot static checks.
+- [x] Confirm GitHub Pages main/root source, canonical domain, and HTTPS enforcement.
+- [ ] Commit and push only the prepared snapshot bundle and intended documentation.
+- [ ] Confirm GitHub Pages deployment for the publication commit.
+- [ ] Verify all twelve public HTML pages, twelve PNGs, and the shared stylesheet.
+- [ ] Verify apex-to-www behavior and a normal public browser load.
+- [ ] Record exact publication commit and deployment evidence.
